@@ -51,26 +51,22 @@ export default function Home() {
     setLoading(true);
 
     try {
-      // Replace with your Google Apps Script URL
-      // Instructions in README.md on how to set this up
-      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
-      
-      if (!scriptUrl) {
-        setError('Form submission is not configured. Please set up Google Sheets integration.');
-        setLoading(false);
-        return;
-      }
-
-      const response = await fetch(scriptUrl, {
+      const response = await fetch('/api/submit', {
         method: 'POST',
-        mode: 'no-cors',
-        body: new URLSearchParams({
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           name: formData.name,
           phone: formData.phone,
           category: formData.category,
           timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
         }),
       });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
 
       setSuccess(true);
       setFormData({ name: '', phone: '', category: 'holding' });
