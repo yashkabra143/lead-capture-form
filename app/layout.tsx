@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
  
 export const metadata: Metadata = {
-  title: "Lead capture to Indori Life Style",
+  title: "Indori Lifestyle",
   description: "Capture leads - Name, Phone, and Category",
 };
 
