@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
  
 export const metadata: Metadata = {
-  title: "Lead Capture Form",
+  title: "Lead capture to Indori Life Style",
   description: "Capture leads - Name, Phone, and Category",
 };
 

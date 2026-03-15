@@ -88,7 +88,7 @@ export default function Home() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2 text-white">
-            Lead Capture
+            Lead capture to Indori Life Style
           </h1>
           <p className="text-slate-400 text-sm">
             Share your details and we'll get in touch
