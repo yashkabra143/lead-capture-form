@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://script.google.com https://*.google.com; connect-src 'self' https://script.google.com https://*.google.com https://*.googleapis.com; frame-src 'self' https://script.google.com; style-src 'self' 'unsafe-inline';",
+            value: "default-src 'self' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; connect-src 'self' https://script.google.com https://*.google.com https://*.googleapis.com; style-src 'self' 'unsafe-inline';",
           },
         ],
       },
