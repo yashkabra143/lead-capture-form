@@ -2,13 +2,5 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "nextjs",
-  "env": [
-    {
-      "key": "NEXT_PUBLIC_GOOGLE_SCRIPT_URL",
-      "value": "",
-      "type": "string",
-      "description": "Google Apps Script webhook URL"
-    }
-  ]
+  "framework": "nextjs"
 }
